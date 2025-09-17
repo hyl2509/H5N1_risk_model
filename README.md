@@ -6,11 +6,3 @@
 
 This repository contains the code and data accompanying the research paper:
 **"Dynamic Prediction of H5N1 Outbreak Hotspots under Global Change"**.
-
-> **Citation**: [Your Name], [Co-Author's Name], et al. (Year). Dynamic Prediction of H5N1 Outbreak Hotspots under Global Change. *Journal Name*, Volume(Issue), Pages. DOI: [Your DOI Here]
-
-## 📖 Overview
-
-This project implements a dynamic modeling framework to predict future spatial-temporal hotspots of H5N1 highly pathogenic avian influenza (HPAI) under various global change scenarios (e.g., climate change, land-use change). The model integrates environmental, climatic, and anthropogenic drivers to produce risk maps and forecast outbreak probabilities.
-
-## 🗂️ Repository Structure
