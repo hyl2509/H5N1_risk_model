@@ -1,6 +1,4 @@
 # ==============================================================================
-# Global Migratory Bird Abundance Analysis
-# 
 # Description: Processes and visualizes monthly migratory bird abundance data
 #              for Europe and North America regions
 #
@@ -251,4 +249,5 @@ ggsave(
   dpi = 300,
   width = 8, 
   height = 4
+
 )
