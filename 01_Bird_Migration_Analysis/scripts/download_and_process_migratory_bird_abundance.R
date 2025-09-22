@@ -11,7 +11,7 @@ library(terra)
 library(readxl)
 
 ### 1. Get bird taxonomy list from eBird and filter target orders
-taxonomy_ref <- read.csv('ebird-taxonomy.csv', header = TRUE)
+taxonomy_ref <- read.csv('data/ebird-taxonomy.csv', header = TRUE)
 
 # Select Anseriformes and Charadriiformes birds
 target_orders <- taxonomy_ref |>
@@ -31,7 +31,7 @@ species_list <- migratory_species$species_code
 
 # Save filtered species information
 write_tsv(migratory_species, 
-          'Information_on_151_species_of_migratory_birds.tsv')
+          'data/Information_on_151_species_of_migratory_birds.tsv')
 
 # Download abundance data with error handling
 failed_downloads <- c()
@@ -61,3 +61,4 @@ weekly_abundance <- lapply(abundance_files, rast)
 
 # [Rest of your processing code remains the same...]
 # [Update output filenames accordingly below]
+
