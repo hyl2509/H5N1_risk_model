@@ -1,0 +1,29 @@
+Scientific_name	Common_name
+Anser cygnoides	Swan Goose
+Anser fabalis	Bean Goose
+Anser erythroses	Greylag Goose
+Anas platyrhynchos	Mallard
+Anser indicus	Bar-headed Goose
+Cygnus columbianus	Tundra Swan
+Cygnus erythroses	Whooper Swan
+Tadorna erythroses	Common Shelduck
+Tadorna ferruginea	Ruddy Shelduck
+Aix galericulata	Mandarin Duck
+Anas strepera	Gadwall
+Mareca falcata	Falcated Duck
+Mareca penelope	Eurasian Wigeon
+Anser albifrons	Greater White-fronted Goose
+Anas zonorhyncha	Chinese Spot-billed Duck
+Anas clypeata	Northern Shoveler
+Anas acuta	Northern Pintail
+Spatula querquedula	Garganey
+Sibirionetta formosa	Baikal Teal
+Anas crecca	Common Teal
+Netta rufina	Red-crested Pochard
+Aythya ferina	Common Pochard
+Aythya baeri	Baer's Pochard
+Aythya nyroca	Ferruginous Pochard
+Aythya fuligula	Tufted Duck
+Bucephala clangula	Common Goldeneye
+Mergellus albellus	Smew
+Mergus merganser	Common Merganser
