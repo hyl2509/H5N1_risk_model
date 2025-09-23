@@ -1,4 +1,4 @@
-Scientific name	Common name	eBird Basic Data	China Bird Observation Record Center	
+Scientific_name	Common_name	eBird_Basic_Data	China_Bird_Observation_Record_Center	
 Anser cygnoides	Swan Goose	1903		10450
 Anser fabalis	Bean Goose	1042		9811
 Anser anser	Greylag Goose	1403		9981
@@ -41,3 +41,4 @@ Anser caerulescens	Snow Goose	27		212
 Melanitta fusca	White-winged Scoter	12		537
 Polysticta stelleri	Przevalski's Partridge	0		0
 Anser erythropus	Lesser White-fronted Goose	112		886
+
