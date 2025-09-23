@@ -204,8 +204,7 @@ for (year in target_years) {
     output_file <- paste0('ssp585_env_variables_', year, '_', 
                           sprintf("%02d", month), '_', months_vector[month], '.csv')
     write_csv(monthly_data, output_file)
-    
-    print(paste("Completed year:", year, "month:", months_vector[month]))
   }
 }
+
 
