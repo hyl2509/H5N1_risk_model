@@ -30,7 +30,6 @@ library(doParallel)
 library(foreach)
 
 # Set seed for reproducibility
-
 set.seed(2025)
 
 # ==============================================================================
@@ -380,6 +379,7 @@ nondetection_random_point <- nondetection_random_point |>
 nondetection_random_point <- nondetection_random_point[, -4]
 write_csv(drop_na(nondetection_random_point),
           'random_background_points_env_vars_for_training.csv')
+
 
 
 
