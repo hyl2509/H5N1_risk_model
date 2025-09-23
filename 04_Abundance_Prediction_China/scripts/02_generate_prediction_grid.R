@@ -1,7 +1,7 @@
 # ==============================================================================
 # Description: This script creates a standardized prediction grid for China
 #              to be used in species distribution modeling for H5N1 host birds.
-#              It processes bird observation checklists and generates a 5km
+#              It processes bird observation checklists and generates a 3km
 #              resolution grid
 #
 # Key steps:
@@ -85,15 +85,16 @@ study_region <- read_sf("map_of_China.json") |>
 # SECTION 4: Create prediction grid
 # ==============================================================================
 
-# Create a raster template covering China with 5km resolution
-r <- rast(study_region, res = c(5000, 5000))
+# Create a raster template covering China with 3km resolution
+r <- rast(study_region, res = c(3000, 3000))
 
 # Rasterize study region - assign value 1 to cells inside China
 r <- rasterize(study_region, r, values = 1) |> 
   setNames("study_region")
 
 # Save prediction grid for later use
-writeRaster(r, "5km_prediction_grid.tif",
+writeRaster(r, "3km_prediction_grid.tif",
                  overwrite = TRUE)
+
 
 
