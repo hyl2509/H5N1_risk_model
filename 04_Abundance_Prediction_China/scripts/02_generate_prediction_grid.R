@@ -2,18 +2,16 @@
 # Description: This script creates a standardized prediction grid for China
 #              to be used in species distribution modeling for H5N1 host birds.
 #              It processes bird observation checklists and generates a 5km
-#              resolution grid with circular buffers for environmental variable
-#              extraction.
+#              resolution grid
 #
 # Key steps:
 # 1. Load and preprocess bird observation checklist data
 # 2. Create unique location identifiers and convert to spatial data
 # 3. Define equal-area projection centered on China
 # 4. Generate 5km resolution prediction grid covering China
-# 5. Create circular buffers around grid cell centers for analysis
 #
 # Inputs: Bird observation checklists, China boundary map
-# Outputs: Prediction grid raster and buffer shapefile
+# Outputs: Prediction grid raster
 # ==============================================================================
 
 # Load required libraries
@@ -95,24 +93,7 @@ r <- rasterize(study_region, r, values = 1) |>
   setNames("study_region")
 
 # Save prediction grid for later use
-r <- writeRaster(r, "5km_prediction_grid.tif",
+writeRaster(r, "5km_prediction_grid.tif",
                  overwrite = TRUE)
 
-# ==============================================================================
-# SECTION 5: Create analysis buffers around grid cells
-# ==============================================================================
-
-# Generate circular buffers around prediction grid cell centers
-# 5km radius buffers will be used for environmental variable extraction
-buffers_pg <- as.data.frame(r, cells = TRUE, xy = TRUE) |> 
-  select(cell_id = cell, x, y) |> 
-  # Convert to spatial points in LAEA projection
-  st_as_sf(coords = c("x", "y"), crs = laea_crs, remove = FALSE) |> 
-  # Transform to geographic coordinates for compatibility
-  st_transform(crs = 4326) |> 
-  # Create 5km circular buffers around each grid point
-  st_buffer(set_units(5, "km"))
-
-# Save buffers as shapefile for future analysis
-write_sf(buffers_pg, "buffers_prediction_grid.shp")
 
