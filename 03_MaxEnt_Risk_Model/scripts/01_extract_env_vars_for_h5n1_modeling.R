@@ -75,7 +75,7 @@ lsm_wide <- lsm |>
   arrange(State, County)
 
 ## Elevation data extraction
-elevation <- rast('wc2.1_30s_elev.tif')
+elevation <- rast('raw_elevation_data_from_worldclim/wc2.1_30s_elev.tif')
 
 unique_geom_elev <- exact_extract(elevation, unique_geom, fun = c("mean", "stdev"),
                                   progress = FALSE) |> 
@@ -224,6 +224,7 @@ h5n1_info_sf <- h5n1_info_sf |>
 
 write_csv(drop_na(h5n1_info_sf),
           'usa_h5n1_surveillance_env_vars_for_training.csv')
+
 
 
 
